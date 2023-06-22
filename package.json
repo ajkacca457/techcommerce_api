@@ -1,0 +1,24 @@
+{
+  "name": "techcommerce_api",
+  "version": "1.0.0",
+  "description": "api for ecommerce",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajkacca457/techcommerce_api.git"
+  },
+  "author": "Avijit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajkacca457/techcommerce_api/issues"
+  },
+  "homepage": "https://github.com/ajkacca457/techcommerce_api#readme",
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
