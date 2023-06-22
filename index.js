@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import ErrorHandler from "./middlewares/ErrorHandler.js";
+import productRoutes from "./routes/productRoutes.js";
 
 
 dotenv.config({
@@ -12,11 +13,11 @@ const app= express();
 app.use(cors);
 app.use(express.json());
 
-
+app.use("/api/v1/products",productRoutes);
 
 app.use(ErrorHandler);
 
-app.listen("5000",()=>{
+app.listen(process.env.PORT,()=>{
     console.log(`app is listening to port ${process.env.PORT}`);
 })
 
