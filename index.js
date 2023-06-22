@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import ErrorHandler from "./middlewares/ErrorHandler.js";
 import productRoutes from "./routes/productRoutes.js";
+import ConnectDB from "./db/Db.js";
 
 
 dotenv.config({
@@ -17,8 +18,17 @@ app.use("/api/v1/products",productRoutes);
 
 app.use(ErrorHandler);
 
-app.listen(process.env.PORT,()=>{
-    console.log(`app is listening to port ${process.env.PORT}`);
-})
+const startServer=async()=>{
+    try {
+        const connect= await ConnectDB();
+        app.listen(process.env.PORT,()=>{
+            console.log(`server is connected to ${connect.connection.host}`);
+        })
+    } catch (error) {
+        console.log(error);
+    }
+}
 
+
+startServer();
 
