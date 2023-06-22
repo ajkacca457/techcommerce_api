@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import ErrorHandler from "./middlewares/ErrorHandler";
+import ErrorHandler from "./middlewares/ErrorHandler.js";
 
 
 dotenv.config({
@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(ErrorHandler);
 
 app.listen("5000",()=>{
-    console.log("app is listening to port 5000");
+    console.log(`app is listening to port ${process.env.PORT}`);
 })
 
 
