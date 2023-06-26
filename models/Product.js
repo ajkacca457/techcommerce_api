@@ -33,6 +33,14 @@ const ProductSchema= mongoose.Schema({
     category:{
         type:String,
         enum:["laptop","tablet","desktop","mobile"]
+    },
+    company:{
+        type:String,
+        enum:["Apple","Lenevo","Asus","Sony","Nokia","Samsung","Motorolla","Oppo"]
+    },
+    featured:{
+        type:Boolean,
+        default:false
     }
 
 })
