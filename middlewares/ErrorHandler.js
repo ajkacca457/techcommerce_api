@@ -23,7 +23,7 @@ if(err.code===11000){
     error= new CustomError(err.message,StatusCodes.CONFLICT);
 }
 
-res.status(error.statusCode||StatusCodes.INTERNAL_SERVER_ERROR).json({
+res.status(error.statuscode||StatusCodes.INTERNAL_SERVER_ERROR).json({
     success:false,
     message:error.message
 })
