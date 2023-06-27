@@ -6,7 +6,6 @@ import productRoutes from "./routes/productRoutes.js";
 import ConnectDB from "./db/Db.js";
 import expressFileUpload from "express-fileupload";
 
-
 dotenv.config({
     path:"./env/config.env"
 });
@@ -15,6 +14,7 @@ const app= express();
 app.use(cors());
 app.use(express.json());
 app.use(expressFileUpload());
+app.use(express.static("public"));
 
 app.use("/api/v1/products",productRoutes);
 
