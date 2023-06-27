@@ -85,11 +85,11 @@ export const uploadImage=AsyncHandler(async(req,res,next)=>{
             return next(new CustomError(`problem with uploading images`,500))
         }
 
-       updatedProduct= await Product.findByIdAndUpdate(id,{image:file.name})
-    })
-
-    res.status(200).json({
+       updatedProduct= await Product.findByIdAndUpdate(id,{image:file.name});
+        res.status(200).json({
         updatedProduct,
         message:"image is saved"
+        })
     })
 })
+
