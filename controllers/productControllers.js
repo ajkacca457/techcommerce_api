@@ -52,3 +52,28 @@ export const createProduct= AsyncHandler(async (req,res,next)=>{
         message:`a new product is successfully created!`
     })
 })
+
+export const uploadImage=AsyncHandler(async(req,res,next)=>{
+    const {id}= req.params;
+
+    const product= await Product.findById(id);
+
+    if(!product) {
+        return next(new CustomError(`cant find product with id - ${id}`))
+    }
+
+    if(!req.files) {
+        return next(new CustomError(`Add an image file`))
+    }
+
+    const {file}= req.files;
+
+    console.log(file);
+
+    if(!file.mimetype.startsWith("image")) {
+        return next(new CustomError(`Add a valid image file`))
+    }
+    res.status(200).json({
+        message:"will upload image"
+    })
+})
