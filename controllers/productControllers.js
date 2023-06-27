@@ -16,9 +16,17 @@ export const getProducts=AsyncHandler(async(req,res,next)=>{
 }) 
 
 
-export const getProduct= AsyncHandler((req,res,next)=>{
+export const getProduct= AsyncHandler(async (req,res,next)=>{
+    const {id}= req.params;
+    const product= await Product.findById(id);
+
+    if(!product) {
+        return next(new CustomError(`cant find product with id - ${id}`))
+    }
+
     res.status(200).json({
-        message:"will get single product"
+        product,
+        message:`product with id - ${id}`
     })
 })
 
