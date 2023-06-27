@@ -14,7 +14,7 @@ const app= express();
 app.use(cors());
 app.use(express.json());
 app.use(expressFileUpload());
-app.use(express.static("public"));
+app.use("/api/v1/products",express.static("public"));
 
 app.use("/api/v1/products",productRoutes);
 
