@@ -80,4 +80,3 @@ Give a ⭐️ if you like this project!
 
  <h2> 📝 License</h2>
 This project is a personal project of Avijit.
-`````
