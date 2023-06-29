@@ -36,16 +36,12 @@ To get a local copy up and running follow these simple example steps.
 
 <h2>API Documentation</h2>
 
-`````
+```
 Endpoints:
     - /api/v1/products to get all products (GET method)
     - /api/v1/products/:id to get single product (GET method)
     - /api/v1/products to create single product (POST method)
-
-
-
-
-````
+```
 
 <h2>Prerequisites for this project</h2>
 
