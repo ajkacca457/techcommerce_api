@@ -34,14 +34,14 @@ export const getProduct= AsyncHandler(async (req,res,next)=>{
 
 export const createProduct= AsyncHandler(async (req,res,next)=>{
 
-    const {name,description,price,image,rating,company,category,featured}= req.body;
+    const {name,description,price,image,rating,company,category,featured,stock}= req.body;
 
-    if(!name||!description||!price||!rating||!company||!category) {
+    if(!name||!description||!price||!rating||!company||!category||!stock) {
         return next (new CustomError("provide required fields"),400)
     }
 
     const product= await Product.create({
-        name,description,price,rating,company,image,featured,category
+        name,description,price,rating,company,image,featured,category,stock
     })
 
     if(!product) {

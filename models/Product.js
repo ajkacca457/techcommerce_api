@@ -42,6 +42,10 @@ const ProductSchema= mongoose.Schema({
         type:Boolean,
         default:false
     },
+    stock: {
+        type:Number,
+        required:[true,"product stock is required"],
+    },
     createdAt:{
         type:Date,
         default:Date.now

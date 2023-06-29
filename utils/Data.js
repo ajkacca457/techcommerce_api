@@ -7,6 +7,7 @@ export const products= [
     shipping:true,
     category:'laptop',
     company: 'Lenevo',
+    stock:4,
     featured :false
 },
 {
@@ -17,6 +18,7 @@ export const products= [
     shipping:false,
     category:'laptop',
     company: 'Asus',
+    stock:0,
     featured :false
 },
 {
@@ -27,6 +29,7 @@ export const products= [
     shipping:false,
     category:'laptop',
     company: 'Samsung',
+    stock:5,
     featured :false
 },
 {
@@ -37,6 +40,7 @@ export const products= [
     shipping:true,
     category:'laptop',
     company: 'Asus',
+    stock:10,
     featured :false
 },
 {
@@ -47,6 +51,7 @@ export const products= [
     shipping:true,
     category:'laptop',
     company: 'Apple',
+    stock:5,
     featured :true
 },
 {
@@ -57,6 +62,7 @@ export const products= [
     shipping:false,
     category:'tablet',
     company: 'Lenevo',
+    stock:10,
     featured :false
 },
 {
@@ -67,6 +73,7 @@ export const products= [
     shipping:true,
     category:'tablet',
     company: 'Samsung',
+    stock:6,
     featured :false
 },
 {
@@ -77,6 +84,7 @@ export const products= [
     shipping:true,
     category:'tablet',
     company: 'Apple',
+    stock:5,
     featured :false
 },
 {
@@ -87,6 +95,7 @@ export const products= [
     shipping:false,
     category:'mobile',
     company: 'Samsung',
+    stock:3,
     featured :true
 },
 {
@@ -97,6 +106,7 @@ export const products= [
     shipping:true,
     category:'mobile',
     company: 'Apple',
+    stock:5,
     featured :true
 },
 ]
