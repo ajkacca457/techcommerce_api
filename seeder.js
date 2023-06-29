@@ -23,6 +23,20 @@ const importData=async()=> {
  }
 }
 
+const deleteData=async()=> {
+    try {
+       await Product.deleteMany({});
+       console.log("products deleted");
+       process.exit();
+    } catch (error) {
+       console.log(error);
+    }
+   }
+   
 
-importData();
+if (process.argv[2]==="-i") {
+    importData();
+} else if( process.argv[2]==="-d") {
+    deleteData();
+}
 
